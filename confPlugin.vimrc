@@ -1,8 +1,8 @@
 call plug#begin('~/.vim/plugged')
-" Themes
+"Themes
 Plug 'morhetz/gruvbox'
 
-" IDE
+"IDE
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
@@ -25,5 +25,14 @@ Plug 'itchyny/vim-gitbranch'
 
 "Ident line
 Plug 'yggdroot/indentline'
+
+"Tagbar
+Plug 'preservim/tagbar'
+
+"Autopairs
+Plug 'jiangmiao/auto-pairs'
+
+"Commentary
+Plug 'tpope/vim-commentary'
 
 call plug#end()

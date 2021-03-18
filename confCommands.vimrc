@@ -1,16 +1,29 @@
 "Leader key
 let mapleader = " "
 
-"Comandos para abrir la terminal abajo
-nmap <c-t> :split<CR>:ter<CR>:resize 14<CR>i
+"Format Document Prettier
+nmap <Leader>f :CocCommand prettier.formatFile<CR>
 
+if has('nvim')
+  "Comandos para abrir la terminal abajo (Solo sirve con neovim)
+  nmap <c-t> :split<CR>:ter<CR>-<CR>i
+endif
 "Comandos easymotion y nerdtree
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>nt :NERDTreeFind<CR>
 
-"Comandos de guardar y cerrar Vim
-nmap<Leader>w :w<CR>
-nmap<Leader>q :q<CR>
+"Comandos de guardar Vim
+nmap <Leader>w :w<CR>
+
+"Comandos para salir y no guardar
+"nmap<Leader>a ZQ 
+
+"Comandos para salir y guardar
+"nmap<Leader>x :x<CR>
+"nmap<Leader>z ZZ
+
+"Comandos para cerrar vim
+nmap <Leader>q :q<CR>
 
 "Command create new tab
 nmap <Leader>tn :tabnew 
@@ -26,6 +39,9 @@ nmap <Leader>c :tabclose<CR>
 
 "Command install Plug
 nmap <Leader>pi :PlugInstall<CR>
+
+"Command open TagBar
+nmap <Leader>tbo :TagbarOpen<CR>
 
 "Comandos coc
 nmap <silent> gd <Plug>(coc-definition)

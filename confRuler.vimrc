@@ -1,11 +1,22 @@
 "Reglas de plugins instalados
 
+autocmd BufFilePre *.sql :CocCommand sql.Format
+
+"Rulers Tagbar autoclose
+let g:tagbar_autoclose=1
+let g:tagbar_autofocus=1
+
+"Ruta de python2 y python3
+let g:python_host_prog= '/bin/python2'
+let g:python3_host_prog= '/bin/python3'
+
 "Reglas de ident
 let g:identLine_char_list = ['│', '┊']
 
 "Reglas Themes gruvbox  
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = "hard"
+
 "Reglas NERDTree
 let NERDTreeQuitOnOpen = 1
 
@@ -41,7 +52,7 @@ let g:lightline = {
    \  'gitbranch': 'gitbranch#name',
    \  'kitestatus': 'kite#statusline'
    \},
-   \'colorscheme': 'jellybeans',
+   \'colorscheme': 'gruvbox',
    \'subseparator': {
    \	'left': '',
    \	'right': ''
