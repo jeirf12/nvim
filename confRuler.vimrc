@@ -1,5 +1,6 @@
 "Reglas de plugins instalados
 
+"Format sql
 autocmd BufFilePre *.sql :CocCommand sql.Format
 
 "Rulers Tagbar autoclose
@@ -29,7 +30,7 @@ autocmd FileType javascript let b:coc_suggest_disable = 1
 autocmd FileType scss setl iskeyword+=@-@
 
 "Sentence optional to warnings en coc
-let g:coc_disable_startup_warning = 1
+"let g:coc_disable_startup_warning = 1
 
 "html, 2SX
 let g:closetag_filenames = '*.html, *.js, *.jsx, *.ts, *.tsx'

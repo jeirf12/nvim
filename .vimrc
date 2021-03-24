@@ -1,5 +1,5 @@
-"Configuracion global
-source ~/.config/nvim/config/confGlobal.vimrc
+"Configuracion Nativa de vim
+source ~/.config/nvim/config/confNative.vimrc
 
 "Configuracion de plugins
 source ~/.config/nvim/config/confPlugin.vimrc
