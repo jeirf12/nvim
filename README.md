@@ -21,12 +21,12 @@ mkdir -p .config/nvim/config/
 ```
 _Then copy the following:_
 ```
-mv ~/settingsNvimLinux/conf* ~/.config/nvim/config/
-mv ~/settingsNvimLinux/init.vim ~/.config/nvim/
+mv ~/vim/conf* ~/.config/nvim/config/
+mv ~/vim/init.vim ~/.config/nvim/
 ```
 _Finally copy the **.vimrc** in **.config**:_
 ```
-mv ~/settingsNvimLinux/.vimrc ~/.config/
+mv ~/vim/.vimrc ~/.config/
 ```
 ## Post-requisitos 📋
 
