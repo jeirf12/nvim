@@ -1,4 +1,4 @@
-# Neovim Settings
+# Neovim Settings Linux
 
 _Propietary modularized neovim configurations_
 
@@ -15,9 +15,8 @@ _You need the following software installed:_
 _Check folder .config/nvim/_
 
 _If it does not exist, create it with the following command:_
-
 ```
-mkdir -p .config/nvim/config/
+mkdir -p ~/.config/nvim/config/
 ```
 _Then copy the following:_
 ```
@@ -27,6 +26,10 @@ mv ~/vim/init.vim ~/.config/nvim/
 _Finally copy the **.vimrc** in **.config**:_
 ```
 mv ~/vim/.vimrc ~/.config/
+```
+_(optional)if you want to use the same neovim settings in vim, create a symbolic link file like this:_
+```
+ln -s ~/.config/.vimrc ~/.vimrc
 ```
 ## Post-requisitos 📋
 
