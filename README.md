@@ -2,36 +2,40 @@
 
 _Propietary modularized neovim configurations_
 
-## Pre-requisitos 📋
+## Pre-requisites 📋
 
 _You need the following software installed:_
 
  * [Neovim](https://github/com/neovim/neovim/wiki/Installing-Neovim) or [vim](https://www.vim.org/download.php)
  * [Git](https://git-scm.com/download/linux)
  * [Npm](https://www.npmjs.com/get-npm) o [Yarn](https://classic.yarnpkg.com/en/docs/install/)
+ * [python](https://www.python.org/downloads/)
 
-### Instalación 🔧
+### Installation 🔧
 
-_Check folder .config/nvim/_
+_First you enter the folder like this:_
 
-_If it does not exist, create it with the following command:_
 ```
-mkdir -p ~/.config/nvim/config/
+$ cd vim
 ```
-_Then copy the following:_
+
+_Run the following script:_
+
 ```
-mv ~/vim/conf* ~/.config/nvim/config/
-mv ~/vim/init.vim ~/.config/nvim/
+$ bash install.sh
 ```
-_Finally copy the **.vimrc** in **.config**:_
+
+_or_
+
 ```
-mv ~/vim/.vimrc ~/.config/
+$ ./install.sh
 ```
+
 _(optional)if you want to use the same neovim settings in vim, create a symbolic link file like this:_
 ```
-ln -s ~/.config/.vimrc ~/.vimrc
+$ ln -s ~/.config/.vimrc ~/.vimrc
 ```
-## Post-requisitos 📋
+## Post-requisites 📋
 
 _You need the following software installed after installation:_
 
