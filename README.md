@@ -1,10 +1,10 @@
 # Neovim Settings Linux
 
-_Propietary modularized neovim configurations_
+Propietary modularized neovim configurations
 
 ## Pre-requisites 📋
 
-_You need the following software installed:_
+You need the following software installed:
 
  * [Neovim](https://github/com/neovim/neovim/wiki/Installing-Neovim)
  * [Git](https://git-scm.com/download/linux)
@@ -13,21 +13,21 @@ _You need the following software installed:_
 
 ### Installation 🔧
 
-_First you enter the folder like this:_
+First you enter the folder like this:
 ```
 $ cd vim
 ```
-_Run the following script:_
+Run the following script:
 ```
 $ bash install.sh
 ```
-_or_
+or
 ```
 $ ./install.sh
 ```
 ## Post-requisites 📋
 
-_You need the following software installed after installation:_
+You need the following software installed after installation:
 
  * [VimPlug](https://github.com/junegunn/vim-plug) - Plugin Package Manager
  * [Coc](https://github.com/neoclide/coc.nvim) - LSP Autocomplete Intelligent 
