@@ -25,7 +25,7 @@ or
 ```
 $ ./install.sh
 ```
-## Post-requisites 📋
+## Post-requisites :wrench:
 
 You need the following software installed after installation:
 
@@ -33,4 +33,9 @@ You need the following software installed after installation:
  * [Coc](https://github.com/neoclide/coc.nvim) - LSP Autocomplete Intelligent 
  * [kite](https://www.kite.com/integrations/vim) and its [complemento](https://github.com/kiteco/vim-plugin/blob/master/DEVELOPMENT.md) for neovim or vim - Autocomplete IA for Python and Javascript 
 
+## Execution :hourglass_flowing_sand:
 
+When you run for the first time you have to write the following  
+inside neovim `:PlugInstall` or press the following keys: `<space>+<p>+<i>`.  
+The latter installs all the plugins configured in the files.  
+Finally run this `:source %` to apply the changes or just exit and re-enter neovim.
