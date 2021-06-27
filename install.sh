@@ -22,7 +22,7 @@ if [[ -e $path/confCommands.vimrc ]] && [[ -e $path/confNative.vimrc ]] && [[ -e
 then
 	#Copia o mueve las configuraciones en la carpeta creada 
 	#en el anterior paso
-	mv $path/conf* $pathCreated
+	mv "$path/conf*" "$pathCreated"
 fi
 
 #Fijo la ruta de origen
@@ -35,7 +35,7 @@ pathDestination=~/.config/nvim/
 if [[ -e $pathSource ]]
 then
 	#Mueve el archivo a la ruta destino
-	mv $pathSource $pathDestination
+	mv "$pathSource" "$pathDestination"
 fi
 
 #Fijo la ruta de origen
@@ -48,7 +48,7 @@ pathDestination=~/.config/
 if [[ -e $pathSource ]]
 then
 	#Mueve el archivo a la ruta destino
-	mv $pathSource $pathDestination
+	mv "$pathSource" "$pathDestination"
 fi
 
 #Por ultimo instala requerimientos de python
