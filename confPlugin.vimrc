@@ -35,4 +35,13 @@ Plug 'jiangmiao/auto-pairs'
 "Commentary
 Plug 'tpope/vim-commentary'
 
+"Emmet abbreviation
+Plug 'mattn/emmet-vim'
+
+"config Editor
+Plug 'editorconfig/editorconfig-vim'
+
+"Connect with other users nvim
+Plug 'jbyuki/instant.nvim'
+
 call plug#end()

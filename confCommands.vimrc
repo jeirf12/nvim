@@ -1,6 +1,9 @@
 "Leader key
 let mapleader = " "
 
+"Format Emmet html
+let g:user_emmet_leader_key = '<C-z>'
+
 "Format Document Prettier
 nmap <Leader>f :CocCommand prettier.formatFile<CR>
 
@@ -40,6 +43,9 @@ nmap <Leader>c :tabclose<CR>
 "Command install Plug
 nmap <Leader>pi :PlugInstall<CR>
 
+"Command install Plug
+nmap <Leader>pu :PlugUpdate<CR>
+
 "Command open TagBar
 nmap <Leader>tbo :TagbarOpen<CR>
 
@@ -51,7 +57,8 @@ nmap <silent> gr <Plug>(coc-references)
 
 "Comandos de coc y kite para autocompletar
 "use control+space para autocompletar
-if &filetype == "javascript" || &filetype == "python"
+if &filetype == "python"
+  " if &filetype == "javascript" || &filetype == "python"
   inoremap <c-space> <C-x><C-u>
 else
   inoremap <silent><expr> <c-space> coc#refresh()

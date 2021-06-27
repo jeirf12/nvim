@@ -1,4 +1,5 @@
 "Reglas de Vim 
+set nocompatible
 set number
 set mouse=a
 set numberwidth=1
@@ -17,3 +18,5 @@ set path +=./**
 set splitbelow
 "set splitright
 set background=dark
+" set tabstop=2
+" set shiftwidth=2
