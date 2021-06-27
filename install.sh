@@ -41,6 +41,9 @@ fi
 #Fijo la ruta de origen
 pathSource=$path/.vimrc
 
+#Fijo la ruta de destino
+pathDestination=~/.config/
+
 #Comprueba la existencia del archivo origen
 if [[ -e $pathSource ]]
 then
