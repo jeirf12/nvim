@@ -1,5 +1,18 @@
 "Reglas de plugins instalados
 
+"activa o desactiva el autocorrector al entrar y salir de un .txt respectivamente
+autocmd BufEnter *.txt set spell spelllang=en,es
+autocmd BufLeave *.txt set nospell
+
+"Save folds on exit and load them on edit
+autocmd BufWinLeave ?* mkview
+autocmd BufWinEnter ?* silent! loadview 
+
+"Recordar ultima linea del archivo
+if has("autocmd")
+  autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") |  exe "normal g`\"" |  endif
+endif
+
 "Name user instant nvim
 let g:instant_username = "fallen"
 

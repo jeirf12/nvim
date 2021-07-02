@@ -3,7 +3,8 @@ set nocompatible
 set number
 set mouse=a
 set numberwidth=1
-set clipboard=unnamed
+set clipboard+=unnamedplus
+filetype plugin on
 syntax enable
 set showcmd
 set ruler
@@ -16,7 +17,14 @@ set laststatus=2
 set noshowmode
 set path +=./**
 set splitbelow
-"set splitright
 set background=dark
-" set tabstop=2
-" set shiftwidth=2
+set expandtab
+set ignorecase
+set incsearch
+
+"Documentar plegado sin el número de lineas
+set foldtext=getline(v:foldstart)
+
+"Save only fold in view options
+set foldmethod=manual
+set viewoptions=folds
