@@ -7,7 +7,6 @@ redColour="\e[0;31m\033[1m"
 blueColour="\e[0;34m\033[1m"
 yellowColour="\e[0;33m\033[1m"
 purpleColour="\e[0;35m\033[1m"
-turquoiseColour="\e[0;36m\033[1m"
 grayColour="\e[0;37m\033[1m"
 
 trap ctrl_c INT
@@ -20,21 +19,21 @@ function ctrl_c(){
 
 function statusDependencies(){
 	tput civis
-	clear; dependecies=(nvim git node yarn python pip)
+	clear; dependencies=(nvim git node yarn python pip)
 	echo -e "${yellowColour}[*]${endColour}${grayColour} Comprobando programas necesarios...${endColour}"
 	sleep 2
 	counter=0
-	for program in "${dependecies[@]}"; do
+	for program in "${dependencies[@]}"; do
 		echo -ne "\n${yellowColour}[*]${endColour}${blueColour} Herramienta${endColour}${purpleColour} $program${endColour}${blueColour}...${endColour}"
-		test -f /usr/bin/$program
-		if [ "$(echo $?)" == "0" ]; then
+		test -f "/usr/bin/$program"
+		if [ "$?" == "0" ]; then
 			echo -e " ${greenColour}(V)${endColour}"
 		else
 			echo -e " ${redColour}(X)${endColour}"
 			counter=$((counter + 1))
 		fi; sleep 1
 	done
-	if [[ "$counter" > "1" ]]; then
+	if [[ "$counter" -gt "1" ]]; then
 		echo -e "\n\n${yellowColour} Vuelva a instalar los programas necesarios para seguir la instalación${endColour}"
 		ctrl_c
 	fi; sleep 1
