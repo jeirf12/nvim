@@ -2,7 +2,7 @@
 let mapleader = " "
 
 "Format Emmet html
-let g:user_emmet_leader_key = '<C-z>'
+let g:user_emmet_leader_key = '<c-z>'
 
 "Format Document Prettier
 nmap <Leader>f :CocCommand prettier.formatFile<CR>

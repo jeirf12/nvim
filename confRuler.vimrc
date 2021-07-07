@@ -43,10 +43,11 @@ let g:gruvbox_contrast_dark = "hard"
 let NERDTreeQuitOnOpen = 1
 
 "Reglas kite
-let g:kite_supported_languajes = ['javascript', 'python']
+let g:kite_supported_languajes = ['python']
 
 "Reglas coc
 autocmd FileType python left b:coc_suggest_disable = 1
+let g:coc_global_extensions = ['coc-json', 'coc-tsserver']
 " autocmd FileType javascript let b:coc_suggest_disable = 1
 " autocmd FileType scss setl iskeyword+=@-@
 
