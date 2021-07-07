@@ -19,7 +19,7 @@ function ctrl_c(){
 
 function statusDependencies(){
 	tput civis
-	clear; dependencies=(nvim git node yarn python pip)
+	clear; dependencies=(nvim git npm yarn python pip)
 	echo -e "${yellowColour}[*]${endColour}${grayColour} Comprobando programas necesarios...${endColour}"
 	sleep 2
 	counter=0
