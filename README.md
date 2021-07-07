@@ -32,4 +32,4 @@ inside neovim `:PlugInstall` or press the following keys: `<space>+<p>+<i>`.
 The latter installs all the plugins configured in the files.  
 Finally run this `:source %` to apply the changes or just exit and re-enter neovim.
 
-Note: If you want to know more about commands, open the file `confCommands.vimrc.
+Note: If you want to know more about commands, open the file `confCommands.vimrc`.
