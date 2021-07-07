@@ -1,57 +1,101 @@
 #!/bin/bash
 # -*- ENCODING: UTF-8 -*-
+#Colores aplicables
+greenColour="\e[0;32m\033[1m"
+endColour="\033[0m\e[0m"
+redColour="\e[0;31m\033[1m"
+blueColour="\e[0;34m\033[1m"
+yellowColour="\e[0;33m\033[1m"
+purpleColour="\e[0;35m\033[1m"
+turquoiseColour="\e[0;36m\033[1m"
+grayColour="\e[0;37m\033[1m"
 
-#Obtiene la ruta donde se encuentra el repositorio
-path=$(pwd)
+trap ctrl_c INT
 
-#se devuelve a la raiz de las carpetas del usuario
-cd ~
+function ctrl_c(){
+	echo -e "\n${yellowColour}[*]${endColour}${grayColour} Saliendo...${endColour}"
+	tput cnorm;
+	exit 0
+}
 
-#Coloco la ruta donde va a crear la carpeta
-pathCreated=~/.config/nvim/config/
+function statusDependencies(){
+	tput civis
+	clear; dependecies=(nvim git node yarn python pip)
+	echo -e "${yellowColour}[*]${endColour}${grayColour} Comprobando programas necesarios...${endColour}"
+	sleep 2
+	counter=0
+	for program in "${dependecies[@]}"; do
+		echo -ne "\n${yellowColour}[*]${endColour}${blueColour} Herramienta${endColour}${purpleColour} $program${endColour}${blueColour}...${endColour}"
+		test -f /usr/bin/$program
+		if [ "$(echo $?)" == "0" ]; then
+			echo -e " ${greenColour}(V)${endColour}"
+		else
+			echo -e " ${redColour}(X)${endColour}"
+			counter=$((counter + 1))
+		fi; sleep 1
+	done
+	if [[ "$counter" > "1" ]]; then
+		echo -e "\n\n${yellowColour} Vuelva a instalar los programas necesarios para seguir la instalación${endColour}"
+		ctrl_c
+	fi; sleep 1
+}
 
-#Comprueba la existencia de la carpeta
-if [[ ! -d $pathCreated ]]
-then
-	#Crea las carpetas si no existe de forma recursiva
-	mkdir -p $pathCreated 
-fi
+function installSettings(){
+	echo -e "\n${yellowColour}[*]${endColour}${blueColour} Instalando las configuraciones de neovim${endColour}"
+	#Obtiene la ruta donde se encuentra el repositorio
+	path=$(pwd)
 
-#Comprueba la existencia de los archivos conf 
-if [[ -e $path/confCommands.vimrc ]] && [[ -e $path/confNative.vimrc ]] && [[ -e $path/confPlugin.vimrc ]] && [[ -e $path/confRuler.vimrc ]]
-then
-	#Copia o mueve las configuraciones en la carpeta creada 
-	#en el anterior paso
-	mv "$path/conf*" "$pathCreated"
-fi
+	#se devuelve a la raiz de las carpetas del usuario
+	cd ~
 
-#Fijo la ruta de origen
-pathSource=$path/init.vim
+	#Coloco la ruta donde va a crear la carpeta
+	pathCreated=~/.config/nvim/config/
 
-#Fijo la ruta de destino
-pathDestination=~/.config/nvim/
+	#Comprueba la existencia de la carpeta
+	if [[ ! -d $pathCreated ]]; then
+		#Crea las carpetas si no existe de forma recursiva
+		mkdir -p $pathCreated 
+	fi
 
-#Comprueba la existencia del archivo origen
-if [[ -e $pathSource ]]
-then
-	#Mueve el archivo a la ruta destino
-	mv "$pathSource" "$pathDestination"
-fi
+	#Comprueba la existencia de los archivos conf 
+	if [[ -e $path/confCommands.vimrc ]] && [[ -e $path/confNative.vimrc ]] && [[ -e $path/confPlugin.vimrc ]] && [[ -e $path/confRuler.vimrc ]]; then
+		#Copia o mueve las configuraciones en la carpeta creada 
+		#en el anterior paso
+		mv "$path/conf*" "$pathCreated"
+	fi
 
-#Fijo la ruta de origen
-pathSource=$path/.vimrc
+	#Fijo la ruta de origen
+	pathSource=$path/init.vim
 
-#Fijo la ruta de destino
-pathDestination=~/.config/
+	#Fijo la ruta de destino
+	pathDestination=~/.config/nvim/
 
-#Comprueba la existencia del archivo origen
-if [[ -e $pathSource ]]
-then
-	#Mueve el archivo a la ruta destino
-	mv "$pathSource" "$pathDestination"
-fi
+	#Comprueba la existencia del archivo origen
+	if [[ -e $pathSource ]]; then
+		#Mueve el archivo a la ruta destino
+		mv "$pathSource" "$pathDestination"
+	fi
 
-#Por ultimo instala requerimientos de python
-pip install pynvim
+	#Fijo la ruta de origen
+	pathSource=$path/.vimrc
 
-#termina el script de instalación
+	#Fijo la ruta de destino
+	pathDestination=~/.config/
+
+	#Comprueba la existencia del archivo origen
+	if [[ -e $pathSource ]]; then
+		#Mueve el archivo a la ruta destino
+		mv "$pathSource" "$pathDestination"
+	fi
+
+	#Por ultimo instala requerimientos de python
+	echo -e "\n${yellowColour}[*]${endColour}${blueColour} Instalando${endColour}${purpleColour} pynvim${endColour}"
+	pip install pynvim > /dev/null 2>&1
+	echo -e "\n${yellowColour}[*]${endColour}${grayColour} Instalación Finalizada...${endColour}"
+	tput cnorm; sleep 2
+}
+
+# Inicia el script de instalación
+statusDependencies
+installSettings
+# Termina el script de instalación
