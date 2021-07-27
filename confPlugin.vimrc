@@ -1,6 +1,9 @@
 call plug#begin('~/.vim/plugged')
 "Themes
 Plug 'morhetz/gruvbox'
+Plug 'arcticicestudio/nord-vim'
+Plug 'rakr/vim-one'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 "IDE
 Plug 'easymotion/vim-easymotion'

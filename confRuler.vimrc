@@ -35,21 +35,41 @@ let g:python3_host_prog = '/bin/python3'
 "Reglas de ident
 let g:identLine_char_list = ['│', '┊']
 
-"Reglas Themes gruvbox  
+"----------------------------------------
+" Reglas themes
+" ---------------------------------------
+
+" gruvbox  
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = "hard"
+
+" nord
+" colorscheme nord
+
+" one
+" colorscheme one
+" set background=dark
+" let g:one_allow_italics = 1
+
+" onehalfdark
+" set t_Co=256
+" colorscheme onehalfdark
+
+"----------------------------------------
 
 "Reglas NERDTree
 let NERDTreeQuitOnOpen = 1
 
 "Reglas kite
-let g:kite_supported_languajes = ['python']
+let g:kite_supported_languages = ['javascript', 'python']
+let g:kite_tab_complete=1
+let g:kite_completion_max_width = 50
 
 "Reglas coc
 autocmd FileType python left b:coc_suggest_disable = 1
-let g:coc_global_extensions = ['coc-json', 'coc-tsserver']
-" autocmd FileType javascript let b:coc_suggest_disable = 1
-" autocmd FileType scss setl iskeyword+=@-@
+autocmd FileType javascript let b:coc_suggest_disable = 1
+autocmd FileType scss setl iskeyword+=@-@
+let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-emmet', 'coc-clangd']
 
 "Sentence optional to warnings en coc
 "let g:coc_disable_startup_warning = 1
@@ -75,10 +95,9 @@ let g:lightline = {
          \  'gitbranch': 'gitbranch#name',
          \  'kitestatus': 'kite#statusline'
          \},
-         \'colorscheme': 'gruvbox',
+         \'colorscheme': 'onehalfdark',
          \'subseparator': {
          \	'left': '',
          \	'right': ''
          \},
          \}
-

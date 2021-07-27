@@ -57,10 +57,8 @@ nmap <silent> gr <Plug>(coc-references)
 
 "Comandos de coc y kite para autocompletar
 "use control+space para autocompletar
-if &filetype == "python"
-  " if &filetype == "javascript" || &filetype == "python"
+if &filetype == "javascript" || &filetype == "python"
   inoremap <c-space> <C-x><C-u>
 else
   inoremap <silent><expr> <c-space> coc#refresh()
 endif
-
