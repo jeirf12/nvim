@@ -22,19 +22,19 @@ function existSettings(){
 	sleep 2
 	flag=0
 	test -d ~/.config/nvim/
-	if [ "$(echo $?)" == "0" ]; then
+	if [ "$?" == "0" ]; then
 		flag=$((flag + 1))
 	fi
 	test -f ~/.config/.vimrc
-	if [ $(echo $?) == "0" ]; then
+	if [ "$?" == "0" ]; then
 		flag=$((flag + 1))
 	fi
 	test -d ~/.vim/plugged/
-	if [ $(echo $?) == "0" ]; then
+	if [ "$?" == "0" ]; then
 		flag=$((flag + 1))
 	fi
 	test -d ~/.config/coc/
-	if [ $(echo $?) == "0" ]; then
+	if [ "$?" == "0" ]; then
 		flag=$((flag + 1))
 	fi
 	if [ "$flag" -eq "0" ]; then
