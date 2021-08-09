@@ -33,3 +33,13 @@ The latter installs all the plugins configured in the files.
 Finally run this `:source %` to apply the changes or just exit and re-enter neovim.
 
 Note: If you want to know more about commands, open the file `confCommands.vimrc`.
+
+### Uninstall :cyclone:
+to uninstall the configurations just run this script:
+```
+$ bash uninstall.sh
+```
+or
+```
+$ ./uninstall.sh
+```
