@@ -8,18 +8,18 @@ You need the following software installed:
  * [Npm](https://www.npmjs.com/get-npm) or [Yarn](https://classic.yarnpkg.com/en/docs/install/)
  * [python](https://www.python.org/downloads/) and [pip](https://tecnonucleous.com/2018/01/28/como-instalar-pip-para-python-en-windows-mac-y-linux/)
 
-### Installation 🔧
+## Installation 🔧
 First you enter the repository folder like this:
 ```
-$ cd nvim/
+cd nvim/
 ```
 Run the following script:
 ```
-$ bash install.sh
+bash install.sh
 ```
 or
 ```
-$ ./install.sh
+./install.sh
 ```
 ## Post-requisites :wrench:
 You need the following software installed after installation:
@@ -34,12 +34,12 @@ Finally run this `:source %` to apply the changes or just exit and re-enter neov
 
 Note: If you want to know more about commands, open the file `confCommands.vimrc`.
 
-### Uninstall :cyclone:
+## Uninstall :cyclone:
 to uninstall the configurations just run this script:
 ```
-$ bash uninstall.sh
+bash uninstall.sh
 ```
 or
 ```
-$ ./uninstall.sh
+./uninstall.sh
 ```
