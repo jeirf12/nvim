@@ -60,7 +60,10 @@ function installSettings(){
 	if [[ -e $path/confCommands.vimrc ]] && [[ -e $path/confNative.vimrc ]] && [[ -e $path/confPlugin.vimrc ]] && [[ -e $path/confRuler.vimrc ]]; then
 		#Copia o mueve las configuraciones en la carpeta creada 
 		#en el anterior paso
-		mv "$path/conf*" "$pathCreated"
+		mv "$path/confNative.vimrc" "$pathCreated"
+		mv "$path/confPlugin.vimrc" "$pathCreated"
+		mv "$path/confRuler.vimrc" "$pathCreated"
+		mv "$path/confCommands.vimrc" "$pathCreated"
 	fi
 
 	#Fijo la ruta de origen
