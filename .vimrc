@@ -1,11 +1,15 @@
-"Configuracion Nativa de vim
+"Configuración Nativa de vim
 source ~/.config/nvim/config/confNative.vimrc
 
-"Configuracion de plugins
+"Configuración de plugins
 source ~/.config/nvim/config/confPlugin.vimrc
 
-"Configuracion de reglas
+"Configuración de reglas
 source ~/.config/nvim/config/confRuler.vimrc
 
-"configuracion de comandos o abrevaciones
+"configuración de comandos o abreviaciones
 source ~/.config/nvim/config/confCommands.vimrc
+
+"configuración de funciones propias
+source ~/.config/nvim/config/confFunctions.vimrc
+
