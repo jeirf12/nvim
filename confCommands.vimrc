@@ -7,10 +7,13 @@ let g:user_emmet_leader_key = '<c-z>'
 "Format Document Prettier
 nmap <Leader>f :CocCommand prettier.formatFile<CR>
 
-if has('nvim')
-  "Comandos para abrir la terminal abajo (Solo sirve con neovim)
-  nmap <c-t> :split<CR>:ter<CR>-<CR>i
-endif
+"if has('nvim')
+"  "Comandos para abrir la terminal abajo (Solo sirve con neovim)
+"  nmap <c-t> :split<CR>:ter<CR>-<CR>i
+"endif
+
+nmap <C-t> :call OpenTerminal()<CR>
+
 "Comandos easymotion y nerdtree
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>nt :NERDTreeFind<CR>
