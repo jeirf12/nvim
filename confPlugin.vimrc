@@ -47,4 +47,10 @@ Plug 'editorconfig/editorconfig-vim'
 "Connect with other users nvim
 Plug 'jbyuki/instant.nvim'
 
+"Run test
+Plug 'vim-test/vim-test'
+
+" Close tag html
+Plug 'alvan/vim-closetag'
+
 call plug#end()

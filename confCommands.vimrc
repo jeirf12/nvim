@@ -7,6 +7,11 @@ let g:user_emmet_leader_key = '<c-z>'
 "Format Document Prettier
 nmap <Leader>f :CocCommand prettier.formatFile<CR>
 
+" test vim
+nnoremap <Leader>t :TestNearest<CR>
+nnoremap <Leader>T :TestFile<CR>
+nnoremap <Leader>TT :TestSuite<CR>
+
 "if has('nvim')
 "  "Comandos para abrir la terminal abajo (Solo sirve con neovim)
 "  nmap <c-t> :split<CR>:ter<CR>-<CR>i
