@@ -57,13 +57,14 @@ function installSettings(){
 	fi
 
 	#Comprueba la existencia de los archivos conf 
-	if [[ -e $path/confCommands.vimrc ]] && [[ -e $path/confNative.vimrc ]] && [[ -e $path/confPlugin.vimrc ]] && [[ -e $path/confRuler.vimrc ]]; then
+	if [[ -e $path/confFunctions.vimrc ]] &&	[[ -e $path/confCommands.vimrc ]] && [[ -e $path/confNative.vimrc ]] && [[ -e $path/confPlugin.vimrc ]] && [[ -e $path/confRuler.vimrc ]]; then
 		#Copia o mueve las configuraciones en la carpeta creada 
 		#en el anterior paso
 		mv "$path/confNative.vimrc" "$pathCreated"
 		mv "$path/confPlugin.vimrc" "$pathCreated"
 		mv "$path/confRuler.vimrc" "$pathCreated"
 		mv "$path/confCommands.vimrc" "$pathCreated"
+		mv "$path/confFunctions.vimrc" "$pathCreated"
 	fi
 
 	#Fijo la ruta de origen
@@ -81,14 +82,17 @@ function installSettings(){
 	#Fijo la ruta de origen
 	pathSource=$path/.vimrc
 
-	#Fijo la ruta de destino
-	pathDestination=~/.config/
-
 	#Comprueba la existencia del archivo origen
 	if [[ -e $pathSource ]]; then
 		#Mueve el archivo a la ruta destino
 		mv "$pathSource" "$pathDestination"
 	fi
+
+	if [[ -e ~/.vimrc ]]; then
+		rm ~/.vimrc
+	fi
+
+	ln -s $pathDestination/.vimrc ~/.vimrc
 
 	#Por ultimo instala requerimientos de python
 	echo -e "\n${yellowColour}[*]${endColour}${blueColour} Instalando${endColour}${purpleColour} pynvim${endColour}"

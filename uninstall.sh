@@ -47,7 +47,7 @@ function existSettings(){
 
 function uninstallSettings(){
 	echo -e "\n${purpleColour}[*]${endColour}${blueColour} Desinstalando las configuraciones de neovim${endColour}"
-	rm -rf ~/.config/nvim/ ~/.config/.vimrc ~/.config/coc/ ~/.vim/plugged/ > /dev/null 2>&1
+	rm -rf ~/.config/nvim/ ~/.vimrc ~/.config/coc/ ~/.vim/plugged/ > /dev/null 2>&1
 
 	#Por ultimo instala requerimientos de python
 	echo -e "\n${purpleColour}[*]${endColour}${blueColour} Desinstalando${endColour}${redColour} pynvim${endColour}"
