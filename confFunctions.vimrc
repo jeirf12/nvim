@@ -1,9 +1,10 @@
 " function for active status autocorrect
-function ActLang(state)
-  if a:state == "on"
+function ActiveLanguage()
+  let b:state = &spell ? "on":"off"
+  if b:state == "off"
     echo "Auto corrector encendido"
     set spell spelllang=en,es
-  elseif a:state == "off"
+  elseif b:state == "on"
     echo "Auto corrector apagado"
     set nospell
   else

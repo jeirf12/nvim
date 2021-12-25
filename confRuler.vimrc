@@ -1,5 +1,8 @@
 "Reglas de plugins instalados
 
+"Quitar doble dolar en php
+autocmd FileType php set iskeyword+=$
+
 "activa o desactiva el autocorrector al entrar y salir de un .txt respectivamente
 autocmd BufEnter *.txt set spell spelllang=en,es
 autocmd BufLeave *.txt set nospell
@@ -7,6 +10,8 @@ autocmd BufLeave *.txt set nospell
 "Save folds on exit and load them on edit
 autocmd BufWinLeave ?* mkview
 autocmd BufWinEnter ?* silent! loadview 
+
+autocmd FileType php setlocal omnifunc=lsp#complete
 
 "Recordar ultima linea del archivo
 if has("autocmd")

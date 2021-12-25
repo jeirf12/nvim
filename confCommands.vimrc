@@ -12,12 +12,23 @@ nnoremap <Leader>t :TestNearest<CR>
 nnoremap <Leader>T :TestFile<CR>
 nnoremap <Leader>TT :TestSuite<CR>
 
+"resize windows
+nmap <Leader>l  <c-w>>
+nmap <Leader>h  <c-w><
+nmap <Leader>j  <c-w>+
+nmap <Leader>k  <c-w>-
+nmap <Leader>i  <c-w>=
+nmap <Leader>a  <c-w>\|
+
 "if has('nvim')
 "  "Comandos para abrir la terminal abajo (Solo sirve con neovim)
 "  nmap <c-t> :split<CR>:ter<CR>-<CR>i
 "endif
 
 nmap <C-t> :call OpenTerminal()<CR>
+
+"activar autocorrector
+nmap <C-l> :call ActiveLanguage()<CR>
 
 "Comandos easymotion y nerdtree
 nmap <Leader>s <Plug>(easymotion-s2)

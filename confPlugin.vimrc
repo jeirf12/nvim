@@ -53,4 +53,8 @@ Plug 'vim-test/vim-test'
 " Close tag html
 Plug 'alvan/vim-closetag'
 
+" Php language server
+" Plug 'prabirshrestha/vim-lsp'
+Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
+
 call plug#end()
