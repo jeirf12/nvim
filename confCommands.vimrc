@@ -28,7 +28,7 @@ nmap <Leader>a  <c-w>\|
 nmap <C-t> :call OpenTerminal()<CR>
 
 "activar autocorrector
-nmap <C-l> :call ActiveLanguage()<CR>
+nmap <C-a> :call ActiveLanguage()<CR>
 
 "Comandos easymotion y nerdtree
 nmap <Leader>s <Plug>(easymotion-s2)
