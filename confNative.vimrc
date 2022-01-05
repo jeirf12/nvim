@@ -1,9 +1,10 @@
 "Reglas de Vim 
+set hidden
 set nocompatible
 set number
 set mouse=a
 set numberwidth=1
-set clipboard+=unnamedplus
+set clipboard^=unnamed,unnamedplus
 filetype plugin on
 syntax enable
 set showcmd
