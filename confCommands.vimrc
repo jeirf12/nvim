@@ -51,10 +51,10 @@ nmap <Leader>q :q<CR>
 nmap <Leader>tn :tabnew 
 
 "Command jump next tab
-nmap <Leader><TAB> :tabnext<CR>
+nmap <Leader><TAB> :bnext<CR>
 
 "Command jump previous tab
-nmap <Leader><left> :tabprev<CR>
+nmap <Leader><left> :bprev<CR>
 
 "Command close tab
 nmap <Leader>c :tabclose<CR>
