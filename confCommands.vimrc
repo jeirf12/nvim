@@ -7,6 +7,9 @@ let g:user_emmet_leader_key = '<c-z>'
 "Format Document Prettier
 nmap <Leader>f :CocCommand prettier.formatFile<CR>
 
+"reload settings vimrc
+nmap <Leader><CR> :source $MYVIMRC<CR>
+
 " test vim
 nnoremap <Leader>t :TestNearest<CR>
 nnoremap <Leader>T :TestFile<CR>
@@ -33,6 +36,12 @@ nmap <C-a> :call ActiveLanguage()<CR>
 "Comandos easymotion y nerdtree
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>nt :NERDTreeFind<CR>
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 "Comandos de guardar Vim
 nmap <Leader>w :w<CR>

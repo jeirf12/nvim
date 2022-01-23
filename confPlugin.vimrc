@@ -54,4 +54,7 @@ Plug 'alvan/vim-closetag'
 " Plug 'prabirshrestha/vim-lsp'
 Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
 
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
 call plug#end()
